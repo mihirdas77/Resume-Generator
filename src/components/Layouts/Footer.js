@@ -7,10 +7,10 @@ const Footer = () => {
         <footer className="footer">
             <div className="container">
                 <div className="footer-text">
-                <span>&copy; 2024 Resume.io</span> | Crafted with ❤️ by 
-                <a href="https://www.linkedin.com/in/mihir-das/" target="_blank" rel="noopener noreferrer" className="footer-link">
-                    Mihir Das
-                </a>
+                    <span>&copy; 2024 Resume.io</span> | Crafted with ❤️ by 
+                    <a href="https://www.linkedin.com/in/mihir-das/" target="_blank" rel="noopener noreferrer" className="footer-link">
+                        Mihir Das
+                    </a>
                 </div>
                 <div className="footer-icons">
                     <a href="https://github.com/mihirdas77" target="_blank" rel="noopener noreferrer" className="icon github">

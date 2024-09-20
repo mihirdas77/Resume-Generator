@@ -18,8 +18,8 @@ const Header = () => {
                         With Resumegen, crafting a tailored, standout resume is simple. Start today and land the job you've always wanted!
                     </p>
                     <div className="header-buttons">
-                        <a href="#builder" className="btn primary-btn">Create My Resume</a>
-                        <a href="#features" className="btn secondary-btn">Explore Features</a>
+                        <a href="#main" className="btn primary-btn">Create My Resume</a>
+                        <a href="#features" className="btn secondary-btn">Suggest a feature</a>
                     </div>
                 </div>
             </div>

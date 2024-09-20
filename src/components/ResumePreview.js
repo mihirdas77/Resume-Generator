@@ -79,79 +79,79 @@ const ResumePreview = () => {
 
         {/* Contact Info */}
         <HStack
-          bg={theme.replace("400", "600")}
-          color={"white"}
-          p={4}
-          justifyContent={"space-between"}
-          spacing={4}
-          alignItems={"flex-start"}
-        >
-          {/* Left Side: Email, Phone, Location */}
-          <VStack alignItems={"flex-start"} spacing={2}>
-            <Tooltip label="Email" fontSize="md">
-              <HStack spacing={1}>
-                <MdMail />
-                <Text>{about.email ? about.email : "mihirdas7707@gmail.com"}</Text>
-              </HStack>
-            </Tooltip>
-            <Tooltip label="Phone" fontSize="md">
-              <HStack spacing={1}>
-                <MdLocalPhone />
-                <Text>{about.phone ? about.phone : "+916202000066"}</Text>
-              </HStack>
-            </Tooltip>
-            <Tooltip label="Location" fontSize="md">
-              <HStack spacing={1}>
-                <MdLocationPin />
-                <Text>{about.address ? about.address : "Jamhsedpur, JH"}</Text>
-              </HStack>
-            </Tooltip>
-          </VStack>
+      bg={theme.replace("400", "600")}
+      color={"white"}
+      p={4}
+      justifyContent={"space-between"}
+      spacing={4}
+      alignItems={"flex-start"}
+       // Stack on mobile, row on larger screens
+    >
+      {/* Left Side: Email, Phone, Location */}
+      <VStack alignItems={"flex-start"} spacing={2}>
+        <Tooltip label="Email" fontSize="md">
+          <HStack spacing={1}>
+            <MdMail fontSize={["16px", "20px"]} />
+            <Text fontSize={["sm", "md"]}>{about.email ? about.email : "mihirdas7707@gmail.com"}</Text>
+          </HStack>
+        </Tooltip>
+        <Tooltip label="Phone" fontSize="md">
+          <HStack spacing={1}>
+            <MdLocalPhone fontSize={["16px", "20px"]} />
+            <Text fontSize={["sm", "md"]}>{about.phone ? about.phone : "+916202000066"}</Text>
+          </HStack>
+        </Tooltip>
+        <Tooltip label="Location" fontSize="md">
+          <HStack spacing={1}>
+            <MdLocationPin fontSize={["16px", "20px"]} />
+            <Text fontSize={["sm", "md"]}>{about.address ? about.address : "Jamshedpur, JH"}</Text>
+          </HStack>
+        </Tooltip>
+      </VStack>
 
-          {/* Right Side: LinkedIn, GitHub, Portfolio */}
-          <VStack alignItems={"flex-start"} spacing={4}>
-            <Tooltip label="LinkedIn" fontSize="md">
-              <HStack spacing={1}>
-                <RiLinkedinBoxFill color="white" />
-                <Link
-                  href={about.linkedin}
-                  isExternal
-                  {...hoverLinkStyle}
-                  color="white" // Set color to white
-                >
-                  LinkedIn
-                </Link>
-              </HStack>
-            </Tooltip>
-            <Tooltip label="GitHub" fontSize="md">
-              <HStack spacing={1}>
-                <RiGithubFill color="white" />
-                <Link
-                  href={about.github ? about.github : "https://github.com/mihirdas77"}
-                  isExternal
-                  {...hoverLinkStyle}
-                  color="white" // Set color to white
-                >
-                  GitHub
-                </Link>
-              </HStack>
-            </Tooltip>
-            <Tooltip label="Portfolio" fontSize="md">
-              <HStack spacing={1}>
-                <RiGlobalLine color="white" />
-                <Link
-                  href={about.portfolio ? about.portfolio : "https://mihirdasportfolio.com"}
-                  isExternal
-                  {...hoverLinkStyle}
-                  color="white" // Set color to white
-                >
-                  Portfolio
-                </Link>
-              </HStack>
-            </Tooltip>
-          </VStack>
-
-        </HStack>
+      {/* Right Side: LinkedIn, GitHub, Portfolio */}
+      <VStack alignItems={"flex-start"} spacing={4} mt={[4, 0]} pl={[0, 4]}> {/* Add padding for mobile */}
+        <Tooltip label="LinkedIn" fontSize="md">
+          <HStack spacing={1}>
+            <RiLinkedinBoxFill fontSize={["16px", "20px"]} />
+            <Link
+              href={about.linkedin}
+              isExternal
+              {...hoverLinkStyle}
+              color="white"
+            >
+              <Text fontSize={["sm", "md"]}>LinkedIn</Text>
+            </Link>
+          </HStack>
+        </Tooltip>
+        <Tooltip label="GitHub" fontSize="md">
+          <HStack spacing={1}>
+            <RiGithubFill fontSize={["16px", "20px"]} />
+            <Link
+              href={about.github ? about.github : "https://github.com/mihirdas77"}
+              isExternal
+              {...hoverLinkStyle}
+              color="white"
+            >
+              <Text fontSize={["sm", "md"]}>GitHub</Text>
+            </Link>
+          </HStack>
+        </Tooltip>
+        <Tooltip label="Portfolio" fontSize="md">
+          <HStack spacing={1}>
+            <RiGlobalLine fontSize={["16px", "20px"]} />
+            <Link
+              href={about.portfolio ? about.portfolio : "https://mihirdasportfolio.com"}
+              isExternal
+              {...hoverLinkStyle}
+              color="white"
+            >
+              <Text fontSize={["sm", "md"]}>Portfolio</Text>
+            </Link>
+          </HStack>
+        </Tooltip>
+      </VStack>
+    </HStack>
 
         {/* Professional Summary */}
         <VStack alignItems={"flex-start"} spacing={5} p={5}>

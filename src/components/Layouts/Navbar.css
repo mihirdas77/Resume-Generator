@@ -9,7 +9,6 @@
     width: 100%;
     z-index: 10;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* border-bottom: 2px solid #e0e0e0; */
 }
 
 .navbar-container {
@@ -21,7 +20,7 @@
 }
 
 .navbar-title {
-    font-family: Cursive;
+    font-family: 'Pacifico', cursive;
     font-size: 28px;
     color: #ffffff; /* White */
     margin: 0;
@@ -68,4 +67,41 @@
 
 .contact-button:focus {
     outline: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column; /* Stack elements on smaller screens */
+        align-items: flex-start;
+    }
+
+    .navbar-title {
+        margin-bottom: 10px; /* Space between title and nav links */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack links vertically */
+        align-items: flex-start; /* Align links to the left */
+    }
+
+    .navbar-link {
+        margin: 10px 0; /* Space between links */
+        margin-right: 0; /* Remove right margin on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-title {
+        font-size: 24px; /* Smaller title on mobile */
+    }
+
+    .navbar-link {
+        font-size: 16px; /* Smaller links on mobile */
+    }
+
+    .contact-button {
+        font-size: 14px; /* Smaller button on mobile */
+        padding: 8px 16px; /* Adjust padding */
+    }
 }

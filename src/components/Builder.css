@@ -57,3 +57,34 @@
     from { opacity: 0; }
     to { opacity: 1; }
 }
+/* Existing styles */
+
+/* Media Query for mobile devices */
+@media only screen and (max-width: 600px) {
+    .builder-container {
+        width: 100%;
+        margin: 10px auto;
+        border-radius: 8px;
+    }
+
+    .tabs-container {
+        flex-direction: column;
+    }
+
+    .tab {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .tab:hover {
+        transform: scale(1.02);
+    }
+
+    .tab.active {
+        font-size: 16px;
+    }
+
+    .tab-panels {
+        padding: 10px;
+    }
+}

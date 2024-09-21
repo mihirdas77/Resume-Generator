@@ -1,31 +1,38 @@
 import { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import WebFont from 'webfontloader';
 import { ResumeProvider } from './Context';
 import './App.css';
-import Header from './components/Layouts/Header';
 import Navbar from './components/Layouts/Navbar';
+import Header from './components/Layouts/Header';
 import Footer from './components/Layouts/Footer';
 import Main from './components/Main';
-import WebFont from 'webfontloader';
+import Builder from './components/Builder'; // Ensure the correct import for Builder
 
 function App() {
-
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ['Pacifico', 'Poppins']
-      }
+        families: ['Pacifico', 'Poppins'],
+      },
     });
   }, []);
 
   return (
-    <>
-      <ResumeProvider>
+    <ResumeProvider>
+      <Router>
         <Navbar />
-        <Header />
-        <Main />
+        {/* <Header /> */}
+        <Routes>
+          <Route path="/" element={<Header />} />
+          <Route path="/main" element={<Main />} />
+          <Route path="/builder" element={<Builder />} />
+          {/* Optional: Add a fallback route for undefined paths */}
+          <Route path="*" element={<h2>404 Not Found</h2>} />
+        </Routes>
         <Footer />
-      </ResumeProvider>
-    </>
+      </Router>
+    </ResumeProvider>
   );
 }
 

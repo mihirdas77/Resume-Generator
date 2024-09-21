@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+   
 }
 
 /* Footer Styles */
@@ -132,6 +134,9 @@
 
 .twitter:hover {
     color: #1da1f2;
+}
+.github:hover{
+    color: black;
 }
 
 /* Responsive Layout */

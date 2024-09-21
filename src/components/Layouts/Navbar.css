@@ -36,7 +36,7 @@
 .navbar-link {
     font-size: 18px;
     margin-right: 20px;
-    color: #ffffff; /* White */
+    color: whitesmoke; /* White */
     text-decoration: none;
     padding: 8px 12px;
     border-radius: 5px;
@@ -69,39 +69,69 @@
     outline: none;
 }
 
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    .navbar-container {
-        flex-direction: column; /* Stack elements on smaller screens */
-        align-items: flex-start;
-    }
-
-    .navbar-title {
-        margin-bottom: 10px; /* Space between title and nav links */
-    }
-
     .navbar-nav {
+        display: none; /* Hide links by default on mobile */
         flex-direction: column; /* Stack links vertically */
-        align-items: flex-start; /* Align links to the left */
+        position: absolute; /* Position below the navbar */
+        background: linear-gradient(90deg, #4a90e2, #50e3c2); /* Same background as navbar */
+        width: 100%; /* Full width */
+        top: 60px; /* Adjust based on navbar height */
     }
 
-    .navbar-link {
-        margin: 10px 0; /* Space between links */
-        margin-right: 0; /* Remove right margin on smaller screens */
+    .nav__hamburger {
+        display: block; /* Show hamburger button */
+        background: none; /* Customize as needed */
+        border: none;
+        color: #ffffff; /* White */
+        font-size: 24px; /* Adjust size */
+        cursor: pointer;
+        margin-left: auto; /* Align to the right */
+    }
+
+    .navbar-nav.navbar-nav--active {
+        display: flex; /* Show links when active */
     }
 }
 
-@media (max-width: 480px) {
+/* Adjustments for screen size 599px to 669px */
+@media (min-width: 599px) and (max-width: 669px) {
+    .nav__hamburger {
+        font-size: 22px; /* Slightly smaller for this range */
+    }
+
     .navbar-title {
-        font-size: 24px; /* Smaller title on mobile */
+        font-size: 24px; /* Adjust title size if needed */
     }
 
     .navbar-link {
-        font-size: 16px; /* Smaller links on mobile */
+        font-size: 16px; /* Adjust link size */
+    }
+}
+
+@media (min-width: 670px) and (max-width: 768px) {
+    .nav__hamburger {
+        font-size: 22px; /* Slightly smaller for this range */
     }
 
-    .contact-button {
-        font-size: 14px; /* Smaller button on mobile */
-        padding: 8px 16px; /* Adjust padding */
+    .navbar-title {
+        font-size: 26px; /* Adjust title size */
+    }
+
+    .navbar-link {
+        font-size: 17px; /* Adjust link size */
+    }
+}
+
+@media (min-width: 769px) {
+    .nav__hamburger {
+        display: none; /* Hide hamburger button on larger screens */
+    }
+
+    .navbar-nav {
+        display: flex; /* Show links normally on larger screens */
+        flex-direction: row; /* Arrange links in a row */
     }
 }

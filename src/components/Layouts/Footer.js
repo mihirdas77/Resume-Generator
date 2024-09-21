@@ -7,9 +7,9 @@ const Footer = () => {
         <footer className="footer">
             <div className="container">
                 <div className="footer-text">
-                    <span>&copy; 2024 Resume.io</span> | Crafted with ❤️ by 
+                    <span>&copy; Resume.io , 2024</span> | Designed and Built with 💻 & ☕ by
                     <a href="https://www.linkedin.com/in/mihir-das/" target="_blank" rel="noopener noreferrer" className="footer-link">
-                        Mihir Das
+                    Mihir Das
                     </a>
                 </div>
                 <div className="footer-icons">

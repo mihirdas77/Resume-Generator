@@ -10,7 +10,7 @@ const Navbar = () => {
                     <a href="#" className="navbar-link">Home</a>
                     <a href="#" className="navbar-link">Templates</a>
                     <a href="#" className="navbar-link">About</a>
-                    <button className="contact-button">Contact</button>
+                    <a href='mailto:mihirdas7707@gmail.com' aria-label="Email"><button  className="contact-button">Contact</button></a>
                 </nav>                
             </div>
         </header>

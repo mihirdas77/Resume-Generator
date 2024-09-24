@@ -39,7 +39,15 @@
 .header-title {
     font-size: 2.5rem;
     font-weight: 800;
-    background: linear-gradient(to right, teal, blue, violet);
+    background: linear-gradient(90deg, 
+    #F25BA6,   
+    #ED8936,   
+    #A0AEC0,   
+    #0CC5EA,   
+    #47BB78,   
+    #9F7AEA,
+    #F56565  
+     );
     -webkit-background-clip: text;
     color: transparent;
     animation: fadeInUp 1.2s ease forwards 0.5s; /* Slide-in with fade animation */

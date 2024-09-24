@@ -11,7 +11,7 @@
     /* border: solid red 2px; */
     padding-bottom: 120px;
     border-radius: 0; /* No border radius */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
     z-index: 20; /* Ensure it's above other elements */
     justify-content: center; /* Center content */
     align-items: center; /* Center content */

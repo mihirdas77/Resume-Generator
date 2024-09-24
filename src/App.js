@@ -7,7 +7,8 @@ import Navbar from './components/Layouts/Navbar';
 import Header from './components/Layouts/Header';
 import Footer from './components/Layouts/Footer';
 import Main from './components/Main';
-import Builder from './components/Builder'; // Ensure the correct import for Builder
+import Builder from './components/Builder'; // Ensure correct import for Builder
+import About from './components/About'; // Import the About component
 
 function App() {
   useEffect(() => {
@@ -22,12 +23,16 @@ function App() {
     <ResumeProvider>
       <Router>
         <Navbar />
-        {/* <Header /> */}
         <Routes>
+          {/* Home Page */}
           <Route path="/" element={<Header />} />
+          {/* Main Page */}
           <Route path="/main" element={<Main />} />
+          {/* Resume Builder Page */}
           <Route path="/builder" element={<Builder />} />
-          {/* Optional: Add a fallback route for undefined paths */}
+          {/* About Page */}
+          <Route path="/about" element={<About />} />
+          {/* 404 Not Found Page */}
           <Route path="*" element={<h2>404 Not Found</h2>} />
         </Routes>
         <Footer />

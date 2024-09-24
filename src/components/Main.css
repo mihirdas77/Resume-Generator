@@ -159,3 +159,51 @@
         font-size: 1.2rem; /* Slightly smaller icon */
     }
 }
+
+
+
+.popup {
+    position: fixed; /* Fixed position */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for element size */
+    background: linear-gradient(300deg, 
+    #F25BA6,   /* Pink */
+    #ED8936,   /* Orange */
+    #F56565,   /* Red */
+    #A0AEC0,   /* Gray */
+    #0CC5EA,   /* Light Blue */
+    #47BB78,   /* Green */
+    #9F7AEA    /* Soft Purple */
+     );
+ /* background-color: rgba(255, 255, 255, 0.95); Slightly more opaque background */
+    padding: 20px 30px; /* Increased padding for a better appearance */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow for more depth */
+    z-index: 1000; /* Higher z-index to ensure it appears above other content */
+    font-size: 1.2rem; /* Font size */
+     /*color: #684a4a; Text color */
+     color: #ffffff;
+    text-align: center; /* Center the text */
+    animation: fadeIn 0.5s ease, slideIn 0.5s ease; /* Combined animations */
+    transition: opacity 0.5s ease; /* Smooth transition */
+    opacity: 1; /* Start fully visible */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        opacity: 1; /* End fully visible */
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translate(-50%, -60%); /* Start slightly higher */
+    }
+    to {
+        transform: translate(-50%, -50%); /* End centered */
+    }
+}

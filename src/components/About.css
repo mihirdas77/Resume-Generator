@@ -1,6 +1,6 @@
 .about-container {
-    padding: 5rem 7rem;
-    max-width: auto;
+    padding: 5rem 10rem;
+    max-width: auto;    /* 1400px */
     margin: 0 auto;
     animation: fadeIn 1s ease-in-out;
     background: linear-gradient(135deg, rgba(255, 182, 193, 0.4), rgba(255, 218, 185, 0.4), rgba(176, 224, 230, 0.4), rgba(152, 251, 152, 0.4), rgba(221, 160, 221, 0.4), rgba(240, 230, 140, 0.4)); /* Soft rainbow gradient */
